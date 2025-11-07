@@ -88,6 +88,7 @@
                                     <outlet property="nameLabel" destination="Xdz-HK-9MK" id="HnV-c4-92I"/>
                                     <outlet property="serialNumberLabel" destination="Mw7-0l-m8Q" id="Ncs-6K-mU0"/>
                                     <outlet property="valueLabel" destination="N7G-RW-08F" id="BfG-BE-1uI"/>
+                                    <segue destination="CSo-Pq-v1S" kind="show" identifier="showItem" id="jJ5-Sg-xML"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,16 +102,16 @@
             </objects>
             <point key="canvasLocation" x="107.63358778625954" y="24.647887323943664"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="uW0-gx-pJA">
             <objects>
-                <viewController id="CSo-Pq-v1S" sceneMemberID="viewController">
+                <viewController id="CSo-Pq-v1S" customClass="DetailViewController" customModule="LootLogger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZWS-if-Pji">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VCG-mW-c4t">
-                                <rect key="frame" x="16" y="126" width="361" height="650"/>
+                                <rect key="frame" x="16" y="67" width="361" height="708"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-T2-lad">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
@@ -161,7 +162,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVG-Ux-oy4">
-                                        <rect key="frame" x="0.0" y="126" width="361" height="524"/>
+                                        <rect key="frame" x="0.0" y="126" width="361" height="582"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -182,6 +183,13 @@
                             <constraint firstItem="BgK-88-Mvg" firstAttribute="bottom" secondItem="VCG-mW-c4t" secondAttribute="bottom" constant="8" id="rgi-ZD-Cb1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h7k-Bp-rjE"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="LVG-Ux-oy4" id="iYa-qY-a0Z"/>
+                        <outlet property="nameField" destination="Rop-N3-aTs" id="1WK-GO-oMX"/>
+                        <outlet property="serialNumberField" destination="YVk-wC-KEm" id="uX6-uw-Psq"/>
+                        <outlet property="valueField" destination="ZTE-40-FjW" id="Gbc-Ze-l78"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btY-o9-h9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
