@@ -33,6 +33,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         return formatter
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        valueField.keyboardType = .numberPad
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
